@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taro ka Birthday</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+        box-sizing: border-box;
+    }
+
+    body{
+        background-image: url(s2.gif);
+        
+        background-size: cover;
+        height: 100%;
+    }
+    .you{
+        object-fit: contain;
+        border-radius: 3px;
+        justify-content: space-evenly;
+        display: flex;
+        
+    }
+    .you:hover{
+        zoom: 125%;
+    }
+    .span{
+        color: red;
+    }
+    .container{
+        color: rgb(127, 207, 6);
+        text-align: center;
+        margin-top: 20px;
+        background-color: wheat;
+        text-shadow: 2px solid black;
+    }
+    .you button{
+        margin-top:10px;
+       
+
+    }
+    .timer{
+        display: flex;
+        background-color: aqua;
+        color: red;
+        margin-top: 20px;
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+    .timer div{
+        flex-basis: 100px;
+    }
+    .timer{
+        
+        text-align: center;
+        justify-content: center;
+    }
+    
+    .timer div p{
+        font-size: 60px;
+        margin-bottom: -14px;
+
+
+    }
+    .bc{
+        width: 100vw;
+    }
+
+    
+    
+
+</style>
+<script>
+    var countDownDate = new Date("Oct 19, 2024 00:00:00:00").getTime();
+    var x = setInterval(function(){
+        var now = new Date().getTime();
+        var distance = countDownDate - now;
+
+        var days = Math.floor(distance / (1000*60*60*24));
+        var hours = Math.floor((distance % (1000*60*60*24)) / (1000* 60 *60));
+        var minutes = Math.floor((distance % (1000*60*60)) / (1000* 60 ));
+        var seconds = Math.floor((distance % (1000*60)) / (1000));
+
+        document.getElementById("days"). innerHTML = days;
+        document.getElementById("hours"). innerHTML = hours;
+        document.getElementById("minutes"). innerHTML = minutes;
+        document.getElementById("seconds"). innerHTML = seconds;
+
+        document.getElementById("demo").innerHTML = days + "d " + hours + "h " +     minutes + "m " + seconds + "s ";
+
+        if(distance < 0){
+            clearInterval(x);
+            document.getElementById("days"). innerHTML = "00";
+            document.getElementById("hours"). innerHTML = "00";
+            document.getElementById("minutes"). innerHTML = "00";
+            document.getElementById("seconds"). innerHTML = "00";
+
+            document.getElementById("demo").innerHTML = " Happy Birthday Debolina";
+            var m = document.getElementsByClassName("bc");
+            m[0].src = "G1.gif";
+        
+            
+            
+        
+            
+
+
+            
+        }
+
+
+    },1000);
+
+</script>
+<body>
+    <div class="container">
+        <h1><span style="color: red; "> TAROLINA'S </span>BIRTHDAY</h1>
+
+    </div>
+    <div class="you">
+        <img src="D1.jpg"  style="width: auto;
+        height: 20vh;  position: absolute; right:0%; bottom:0%; "      alt="">
+        <img src="D2.jpg"  style="width: auto;
+        height: 20vh;  position: absolute; left:0%; bottom:0%; "   alt="">
+        <img src="D3.jpg"  style="width: auto;
+        height: 20vh;  position: absolute;  bottom:0%; "   alt="">
+        <button> <a href="https://m.facebook.com/profile.php" target="_blank"   style="text-decoration: none;" type = "button"> <b>Who is the BEST ?</b> ❤️</a></button>
+        
+    </div>
+    <div class="timer" >
+        <div>
+            <p id="days">00</p>
+            <span>Days</span>
+        </div>
+        <div>
+            <p id="hours">00</p>
+            <span>Hours</span>
+        </div>
+        <div>
+            <p id="minutes">00</p>
+            <span>Minutes</span>
+        </div>
+        <div>
+            <p id="seconds">00</p>
+            <span>Seconds</span>
+        </div>
+
+    </div>
+
+    <p id="demo"></p>
+    <img class="bc" src="">
+
+
+
+
+    
+</body>
+</html>
