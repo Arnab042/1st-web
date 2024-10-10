@@ -70,13 +70,20 @@
     .bc{
         width: 100vw;
     }
+    .song{
+        justify-content: center;
+        display: flex;
+        align-items: center;
+
+
+    }
 
     
     
 
 </style>
 <script>
-    var countDownDate = new Date("Oct 19, 2024 00:00:00:00").getTime();
+    var countDownDate = new Date("Oct 10, 2024 00:00:00:00").getTime();
     var x = setInterval(function(){
         var now = new Date().getTime();
         var distance = countDownDate - now;
@@ -91,6 +98,7 @@
         document.getElementById("minutes"). innerHTML = minutes;
         document.getElementById("seconds"). innerHTML = seconds;
 
+        
 
         if(distance < 0){
             clearInterval(x);
@@ -117,10 +125,6 @@
 
 </script>
 <body>
-    < audio controls autoplay loop>
-        <source src= "song.mp3" >
-    </audio>
-        
     <div class="container">
         <h1><span style="color: red; "> TAROLINA'S </span>BIRTHDAY</h1>
 
@@ -157,8 +161,8 @@
 
     <p id="demo"></p>
     <img class="bc" src="">
-
-
+    <div class = "song"><audio  controls autoplay src="song.mp3"></audio>
+    </div>
 
 
     
