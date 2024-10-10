@@ -19,16 +19,49 @@
         background-size: cover;
         height: 100%;
     }
-    .you{
+    .you1{
         object-fit: contain;
         border-radius: 3px;
         justify-content: space-evenly;
         display: flex;
+        overflow: hidden;
+    }
+    .you2{
+        object-fit: contain;
+        border-radius: 3px;
+        justify-content: space-evenly;
+        display: flex;
+        overflow: hidden;
+    }
+
+
+
+    
+    .you.img123{
+        object-fit: contain;
+        border-radius: 3px;
+        justify-content: space-evenly;
+        display: flex;
+        overflow: hidden;
         
+    }
+    .you button{
+        justify-content: center;
+        display: flex;
+        align-content: center;
+        margin-left: 20vh;
     }
     .you:hover{
         zoom: 125%;
     }
+    .you1:hover{
+        zoom: 125%;
+    }
+    .you2:hover{
+        zoom: 125%;
+    }
+
+
     .span{
         color: red;
     }
@@ -39,8 +72,13 @@
         background-color: wheat;
         text-shadow: 2px solid black;
     }
-    .you button{
+    
+    button{
         margin-top:10px;
+        justify-content: center;
+        align-items: center;
+        align-self: center;
+        left: 50px;
        
 
     }
@@ -76,8 +114,75 @@
         align-items: center;
 
 
-    }
 
+    }
+    .you2{
+        animation-name: I2;
+        animation-duration: 20s;
+        animation-iteration-count: infinite;
+        transition: ease-in-out;
+    }
+    @keyframes I2 {
+        from{
+            opacity: 1;
+        }
+        to{
+            opacity: 0.5;
+        }
+        to{
+            opacity: 0;
+        }
+    }
+    .you1{
+        animation-name: I1;
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+        transition: ease-in-out;
+    }
+    @keyframes I1 {
+        from{
+            opacity: 1;
+        }
+        to{
+            opacity: 0.1; 
+        }
+        to{
+            opacity: 0;
+        }
+        
+        
+        
+    
+    
+        
+    }
+    
+    
+    
+        
+    
+    .you.img123{
+        animation-name: I3;
+        animation-duration: 7s;
+        animation-iteration-count: infinite;
+        transition: ease-in-out;
+    }
+    @keyframes I3 {
+        from{
+            opacity: 0.1;
+        }
+        to{
+            opacity: 1;
+        }
+        
+    
+    
+        
+    }            
+   
+    
+    
+    
     
     
 
@@ -130,15 +235,53 @@
 
     </div>
     <div class="you">
-        <img src="D1.jpg"  style="width: auto;
-        height: 20vh;  position: absolute; right:0%; bottom:0%; "      alt="">
-        <img src="D8.jpg"  style="width: auto;
-        height: 20vh;  position: absolute; left:0%; bottom:0%; "   alt="">
-        <img src="D3.jpg"  style="width: auto;
-        height: 20vh;  position: absolute;  bottom:0%; "   alt="">
         <button> <a href="https://www.facebook.com/profile/" target="_blank"   style="text-decoration: none;" type = "button"> <b>Who is the BEST ?</b> ❤️</a></button>
+        <div class="img123">
+            <img src="D1.jpg" class="Img1" style="width: auto;overflow: hidden;
+            height: 20vh;  position: absolute; left:0%; bottom:0%; "      alt="">
+    
+        <img  class="Img2"  src="D2.jpg" style="width: auto;overflow: hidden;
+            height: 20vh; left:180px;  position: absolute;  bottom:0%; "   alt="">
+         
+        <img  class="Img3"  src="D3.jpg"  style="width: auto;overflow: hidden;
+            height: 20vh;  position: absolute; right:0%; bottom:0%; "   alt="">
+        </div>
+        
+        
+        
+
+     
         
     </div>
+    
+
+    <div class="you1">
+        <img   class="Img4" src="D4.jpg" style="width: auto;overflow: hidden;
+        height: 20vh;  position: absolute; left:0%; bottom:0%; "   alt="">
+        
+        
+        <img  class="Img5"  src="D5.jpg" style="width: auto;overflow: hidden;
+        height: 20vh;  position: absolute;  bottom:0%; "   alt="">
+
+        
+        
+        <img  class="Img6"  src="D6.jpg" style="width: auto;overflow: hidden; 
+        height: 20vh;  position: absolute; right: 0%;  bottom:0%; "   alt="">
+    
+</div>
+
+<div class="you2">
+     <img  class="Img7"  src="D7.jpg" style="width: auto;overflow: hidden;
+        height: 20vh; width: 125px;  position: absolute; left:0; bottom:0%; "   alt="">
+        <img  class="Img8"  src="D8.jpg" style="width: auto;overflow: hidden;
+        height: 20vh;  position: absolute;  bottom:0%; "   alt="">
+        <img   class="Img9"  src="D9.jpg" style="width: auto;overflow: hidden;
+        height: 20vh;  position: absolute; right:0; bottom:0%; width: 120px;"   alt="">
+        
+        
+</div>
+    
+   
     <div class="timer" >
         <div>
             <p id="days">00</p>
